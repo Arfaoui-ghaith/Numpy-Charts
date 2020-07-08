@@ -83,12 +83,6 @@ def ExtractSeparatedData(liste):
     return DataSeparated
 
 
-def make_patch_spines_invisible(ax):
-    ax.set_frame_on(True)
-    ax.patch.set_visible(False)
-    for sp in ax.spines.values():
-        sp.set_visible(False)
-
 
 global dataArray
 dataArray = ExtractFromCSV('coronaviruschiffres.csv') # Extract the Data of COVID-19 From csv file
@@ -102,7 +96,6 @@ figure, axis_italie = plt.subplots()
 axis_espagne = axis_italie.twinx()
 axis_france = axis_italie.twinx()
 axis_france.spines["right"].set_position(("axes", 1.05))
-make_patch_spines_invisible(axis_france)
 axis_france.spines["right"].set_visible(True)
 
 
