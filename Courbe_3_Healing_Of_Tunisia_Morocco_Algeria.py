@@ -104,22 +104,22 @@ axis_tunisie.spines["right"].set_visible(True)
 x1 = ExtractSeparatedData(ExtractDataOfCountry('tunisie'))[0][28:-1] 
 y1 = ExtractSeparatedData(ExtractDataOfCountry('tunisie'))[3][28:-1] 
 # line 2 points 
-x2 = ExtractSeparatedData(ExtractDataOfCountry('AlgÃ©rie'))[0][36::]   
-y2 = ExtractSeparatedData(ExtractDataOfCountry('AlgÃ©rie'))[3][36::]
+x2 = ExtractSeparatedData(ExtractDataOfCountry('AlgÃ©rie'))[0][36:]   
+y2 = ExtractSeparatedData(ExtractDataOfCountry('AlgÃ©rie'))[3][36:]
 # line 3 points 
-x3 = ExtractSeparatedData(ExtractDataOfCountry('Maroc'))[0][30::]   
-y3 = ExtractSeparatedData(ExtractDataOfCountry('Maroc'))[3][30::]
+x3 = ExtractSeparatedData(ExtractDataOfCountry('Maroc'))[0][30:]   
+y3 = ExtractSeparatedData(ExtractDataOfCountry('Maroc'))[3][30:]
 
 
 
 # plotting the lines  
  
-axis_maroc.tick_params(axis='y', which='major', labelsize=5)
-axis_algerie.tick_params(axis='y', which='major', labelsize=5)
-axis_tunisie.tick_params(axis='y', which='major', labelsize=5)
-axis_tunisie.plot(x1, y1,color="red", label = "Tunisia")
-axis_algerie.plot(x2, y2,color="green", label = "Algeria")
-axis_maroc.plot(x3, y3, label = "morocco",color="orange") 
+axis_maroc.tick_params(axis='y', labelsize=5)
+axis_algerie.tick_params(axis='y', labelsize=5)
+axis_tunisie.tick_params(axis='y', labelsize=5)
+axis_tunisie.plot(x1, y1,color="red")
+axis_algerie.plot(x2, y2,color="green")
+axis_maroc.plot(x3, y3, color="orange") 
 
 
 #Settings for the window

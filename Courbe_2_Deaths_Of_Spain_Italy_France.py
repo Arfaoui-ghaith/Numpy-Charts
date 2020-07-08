@@ -101,7 +101,7 @@ axis_france.spines["right"].set_visible(True)
 
 # line 1 points 
 x1 = ExtractSeparatedData(ExtractDataOfCountry('france'))[0][37:-1] 
-y1 = ExtractSeparatedData(ExtractDataOfCountry('france'))[2][38::] 
+y1 = ExtractSeparatedData(ExtractDataOfCountry('france'))[2][38:] 
 # line 2 points 
 x2 = ExtractSeparatedData(ExtractDataOfCountry('italie'))[0][30:]   
 y2 = ExtractSeparatedData(ExtractDataOfCountry('italie'))[2][30:]
@@ -112,12 +112,12 @@ y3 = ExtractSeparatedData(ExtractDataOfCountry('espagne'))[2][29:]
 
 
 # plotting the lines   
-axis_espagne.tick_params(axis='y', which='major', labelsize=5)
-axis_italie.tick_params(axis='y', which='major', labelsize=5)
-axis_france.tick_params(axis='y', which='major', labelsize=5)
-axis_france.plot(x1, y1,color="blue", label = "France", linestyle='dashed', linewidth = 1.5)
-axis_espagne.plot(x3, y3, label = "Espagne",color="red", linestyle='dashed', linewidth = 1.5) 
-axis_italie.plot(x2, y2,color="green", label = "Italie", linestyle='dashed', linewidth = 1.5)
+axis_espagne.tick_params(axis='y' , labelsize=5)
+axis_italie.tick_params(axis='y' , labelsize=5)
+axis_france.tick_params(axis='y', labelsize=5)
+axis_france.plot(x1, y1,color="blue", linestyle='dashed', linewidth = 1.5)
+axis_espagne.plot(x3, y3,color="red", linestyle='dashed', linewidth = 1.5) 
+axis_italie.plot(x2, y2,color="green", linestyle='dashed', linewidth = 1.5)
 
 
 
